@@ -1,0 +1,26 @@
+[2022-08-23 00:00:19,928] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2022-08-22T00:00:00+00:00 [queued]>
+[2022-08-23 00:00:19,985] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2022-08-22T00:00:00+00:00 [queued]>
+[2022-08-23 00:00:19,987] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-23 00:00:19,990] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-08-23 00:00:19,997] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-23 00:00:20,049] {taskinstance.py:1397} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2022-08-22 00:00:00+00:00
+[2022-08-23 00:00:20,238] {standard_task_runner.py:52} INFO - Started process 92725 to run task
+[2022-08-23 00:00:20,288] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'scheduled__2022-08-22T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/user-processing.py', '--cfg-path', '/tmp/tmp628ly79y', '--error-file', '/tmp/tmptiqm43cz']
+[2022-08-23 00:00:20,293] {standard_task_runner.py:80} INFO - Job 13: Subtask extract_user
+[2022-08-23 00:00:21,365] {task_command.py:371} INFO - Running <TaskInstance: user_processing.extract_user scheduled__2022-08-22T00:00:00+00:00 [running]> on host 6eab8cd56147
+[2022-08-23 00:00:22,471] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-22T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-22T00:00:00+00:00
+[2022-08-23 00:00:22,506] {http.py:102} INFO - Calling HTTP method
+[2022-08-23 00:00:22,638] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2022-08-23 00:00:22,656] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2022-08-23 00:00:24,021] {http.py:106} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Diana","last":"Luciv"},"location":{"street":{"number":2177,"name":"Magistralna"},"city":"Peremishlyani","state":"Chernivecka","country":"Ukraine","postcode":67391,"coordinates":{"latitude":"77.9158","longitude":"131.1955"},"timezone":{"offset":"+11:00","description":"Magadan, Solomon Islands, New Caledonia"}},"email":"diana.luciv@example.com","login":{"uuid":"38ef38af-a409-4806-a1df-d162d33b34bd","username":"yellowswan171","password":"super1","salt":"tdJHaAye","md5":"631d82a3d11d91d6be919e11d8ee691c","sha1":"c38bb060b38f66915f58e5bb9e32d065de8b8469","sha256":"b2aa657664915e0182ff531962e24fd52cd2de0f890d6a448525acfa13222418"},"dob":{"date":"1967-08-01T16:38:25.289Z","age":55},"registered":{"date":"2004-10-20T17:34:39.612Z","age":17},"phone":"(067) E62-2782","cell":"(099) T09-0749","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/women/82.jpg","medium":"https://randomuser.me/api/portraits/med/women/82.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/82.jpg"},"nat":"UA"}],"info":{"seed":"7686e55ecbed7aed","results":1,"page":1,"version":"1.4"}}
+[2022-08-23 00:00:24,324] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extract_user, execution_date=20220822T000000, start_date=20220823T000019, end_date=20220823T000024
+[2022-08-23 00:00:24,524] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-23 00:00:25,351] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
